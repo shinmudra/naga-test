@@ -1,9 +1,6 @@
 package com.sia.test;
  
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.Date;
 import java.util.Properties;
 
@@ -17,8 +14,6 @@ import org.jasypt.properties.EncryptableProperties;
  
 public class ReadPropertiesFile {
 	String result = "";
-	InputStream inputStream;
- 
 	public String getPropValues() throws IOException {
  
 		try {
@@ -47,9 +42,7 @@ public class ReadPropertiesFile {
 			System.out.println(result + "\nProgram Ran on " + time + " for site=" + siteURL);
 		} catch (Exception e) {
 			System.out.println("Exception: " + e);
-		} finally {
-			inputStream.close();
-		}
+		} 
 		return result;
 	}
 }
