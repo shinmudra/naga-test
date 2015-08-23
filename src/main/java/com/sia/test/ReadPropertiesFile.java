@@ -28,7 +28,6 @@ public class ReadPropertiesFile {
 			System.out.println("Encription Key" + encKey);
 			encryptor.setPassword(encKey);
 			
-			Properties prop = new Properties();
 			String propFileName = "ConfigValues.properties";
 			
 			Properties props = new EncryptableProperties(encryptor);  
@@ -39,10 +38,10 @@ public class ReadPropertiesFile {
 			Date time = new Date(System.currentTimeMillis());
  
 			// get the property value and print it out
-			String siteURL = prop.getProperty("siteUrl");
-			String shopUrl = prop.getProperty("shopUrl");
-			String dbUserName = prop.getProperty("DbUserName");
-			String dbPassword = prop.getProperty("DbPassword");
+			String siteURL = props.getProperty("siteUrl");
+			String shopUrl = props.getProperty("shopUrl");
+			String dbUserName = props.getProperty("DbUserName_"+envronment);
+			String dbPassword = props.getProperty("DbPassword_"+envronment);
  
 			result = "Shop Url = " + shopUrl + ", " + dbUserName + ", " + dbPassword;
 			System.out.println(result + "\nProgram Ran on " + time + " for site=" + siteURL);
