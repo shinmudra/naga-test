@@ -32,7 +32,8 @@ public class ReadPropertiesFile {
 			String propFileName = "ConfigValues.properties";
 			
 			Properties props = new EncryptableProperties(encryptor);  
-			props.load(new FileInputStream("/Users/Dhanushyellina/git/naga-test/src/main/resources/ConfigValues.properties"));
+			
+			props.load(getClass().getClassLoader().getResourceAsStream(propFileName));
 			String datasourceUsername = props.getProperty("DbPassword_"+envronment);
 			System.out.println("datasourceUsername" + datasourceUsername);
 			
