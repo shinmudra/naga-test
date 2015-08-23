@@ -27,6 +27,12 @@
       <artifactId>heroku-jdbc</artifactId>
       <version>0.1.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.jasypt</groupId>
+      <artifactId>jasypt</artifactId>
+      <version>1.8</version>
+      <scope>compile</scope>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
