@@ -36,15 +36,6 @@ public class ReadPropertiesFile {
 			props.load(getClass().getClassLoader().getResourceAsStream(propFileName));
 			String datasourceUsername = props.getProperty("DbPassword_"+envronment);
 			System.out.println("datasourceUsername" + datasourceUsername);
-			
-			inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
- 
-			if (inputStream != null) {
-				prop.load(inputStream);
-			} else {
-				throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
-			}
- 
 			Date time = new Date(System.currentTimeMillis());
  
 			// get the property value and print it out
